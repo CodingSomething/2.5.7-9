@@ -40,7 +40,13 @@ public class MediaLibRunner
 	System.out.println(newBook2 + " equal " + newBook + "? "  + newBook2.equals(newBook));
 	newBook2.setAuthor("George Orwell");
 	System.out.println(newBook2 + " equal " + newBook + "? "  + newBook2.equals(newBook));
- 
+	
+	Movie newMovie = new Movie("The Lego Movie", "Lego", 2.00);
+	MediaLib myLib1 = new MediaLib();
+	myLib1.addMovie(newMovie);
+
+	Song rick = new Song("Never Gonna Give You Up", "Rick Astley");
+	myLib1.addSong(rick);
  
   }
 }

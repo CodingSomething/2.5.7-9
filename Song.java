@@ -1,15 +1,13 @@
-public class Movie {
+public class Song {
   private int rating;
   private String title;
   private String author;
-  private double duration;
  
   /*** Constructor ****/
-  public Movie(String t, String a, double d)
+  public Song(String t, String a)
   {
 	title = t;
 	author = a;
-    duration = d;
   }
  
    /*** Accessor methods ***/
@@ -24,13 +22,10 @@ public class Movie {
   public int getRating() {
 	return rating;
   }
-  public double getDuration(){
-    return duration;
-  }
  
   public String toString()  
   {
-	String info = "\"" + title + "\", written by " + author;
+	String info = "\"" + title + "\", sung by " + author;
 	if (rating != 0){
         info += ", rating is " + rating;
     }
@@ -38,9 +33,9 @@ public class Movie {
 	return info;
   }
  
-  public boolean equals(Movie m)
+  public boolean equals(Song s)
   {
-	if(this.title.equals(m.title) && this.author.equals(m.author)){
+	if(this.title.equals(s.title) && this.author.equals(s.author)){
         return true;
     }
 	return false;
@@ -55,9 +50,6 @@ public class Movie {
   public void setTitle(String t) {
 	title = t;
   }
-  public void setDuration(double d){
-    duration =d;
-  }
  
   public void adjustRating(int r)
   {
@@ -66,6 +58,5 @@ public class Movie {
  
 	r = 10;
  
-  }
-
+  } 
 }
