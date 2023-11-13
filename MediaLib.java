@@ -4,12 +4,16 @@ public class MediaLib
   private Movie movie;
   private Song song;
   private static int numEntries;
+  private static int numBooks;
+  private static int numMovies;
+  private static int numSongs;
  
   public void addBook(Book b)
   {
     if (book == null){
 	    book = b;
       numEntries++;
+      numBooks++;
     }
     else{
       System.out.println("There is already a book in this library.");
@@ -19,6 +23,7 @@ public class MediaLib
     if (movie == null){
       movie = m;
       numEntries++;
+      numMovies++;
     }
     else{
       System.out.println("There is already a movie in this library.");
@@ -28,6 +33,7 @@ public class MediaLib
     if (song == null){
       song = s;
       numEntries++;
+      numSongs++;
     }
     else{
       System.out.println("There is already a song in this library.");
