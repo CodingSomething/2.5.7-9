@@ -47,6 +47,8 @@ public class MediaLibRunner
 
 	Song rick = new Song("Never Gonna Give You Up", "Rick Astley");
 	myLib1.addSong(rick);
+	rick.adjustRating(5);
+	rick.adjustRating(-2);
  
   }
 }

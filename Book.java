@@ -56,8 +56,8 @@ public class Book
   {
 	if ((rating + r >= 0) && (rating + r <= 10))
   	rating += r;
- 
-	r = 10;
+    System.out.println("Adjusting rating by " + r);
+	
  
   }
  

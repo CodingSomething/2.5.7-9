@@ -3,10 +3,12 @@ public class MediaLib
   private Book book;
   private Movie movie;
   private Song song;
+  private static String owner = "joe";
   private static int numEntries;
   private static int numBooks;
   private static int numMovies;
   private static int numSongs;
+  private String date;
  
   public void addBook(Book b)
   {
@@ -14,6 +16,7 @@ public class MediaLib
 	    book = b;
       numEntries++;
       numBooks++;
+      date = Time.retTime();
     }
     else{
       System.out.println("There is already a book in this library.");
@@ -24,6 +27,7 @@ public class MediaLib
       movie = m;
       numEntries++;
       numMovies++;
+      date = Time.retTime();
     }
     else{
       System.out.println("There is already a movie in this library.");
@@ -34,6 +38,7 @@ public class MediaLib
       song = s;
       numEntries++;
       numSongs++;
+      date = Time.retTime();
     }
     else{
       System.out.println("There is already a song in this library.");
@@ -60,5 +65,8 @@ public class MediaLib
   public static int getNumEntries(){
       //System.out.println("Test: Owner is " + owner);
       return numEntries;
+  }
+  public static String getOwner(){
+    return owner;
   }
 }
